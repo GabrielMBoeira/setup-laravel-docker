@@ -22,7 +22,7 @@ Rode o docker dentro do terminal WSL2
 1. Clone Repositório
 
 ```sh
-git clone  my-project
+git clone https://github.com/GabrielMBoeira/setup-laravel-docker my-project
 ```
 
 2. Acesse o diretório criado
