@@ -37,12 +37,12 @@ cd my-project/
 rm -rf .git/
 ```
 
-4. Crie o Arquivo .env
+5. Crie o Arquivo .env
 ```sh
 cp .env.example .env
 ```
 
-5. Somente rode este comando caso não tenha acesso docker ubuntu
+6. Somente rode este comando caso não tenha acesso docker ubuntu
 
 ```sh
 sudo chmod 666 /var/run/docker.sock
@@ -52,43 +52,43 @@ sudo chmod 775 -R mysql (permissão no diretório mysql)
 sudo chown -R "${USER:-$(id -un)}" . 
 ```
 
-6. Antes de fazer o build altere as variáveis de ambiente (Ex: Database)
+7. Antes de fazer o build altere as variáveis de ambiente (Ex: Database)
 
 ```sh 
 Informações ficam salvos em cache com isso evitará alguns 
 ```
 
-7. crie as imagens 
+8. crie as imagens 
 
 ```sh
 docker-compose build
 ```
 
-8. Suba os containers do projeto
+9. Suba os containers do projeto
 
 ```sh
 docker-compose up -d
 ```
 
-9. Acesse o container app com o bash
+10. Acesse o container app com o bash
 
 ```sh
 docker-compose exec app bash
 ```
 
-10. Instale as dependências do projeto
+11. Instale as dependências do projeto
 
 ```sh
 composer install
 ```
 
-11. Gere a key do projeto Laravel
+12. Gere a key do projeto Laravel
 
 ```sh
 php artisan key:generate
 ```
 
-12. Configure o arquivo .gitignore
+13. Configure o arquivo .gitignore
 
 ```sh
 Informar arquivo .env e arquivos DB
