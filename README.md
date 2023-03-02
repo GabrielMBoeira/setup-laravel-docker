@@ -52,10 +52,10 @@ sudo chmod 775 -R mysql (permissão no diretório mysql)
 sudo chown -R "${USER:-$(id -un)}" . 
 ```
 
-6. Antes de fazer o build altere as vari�veis de ambiente (Ex: Database)
+6. Antes de fazer o build altere as variáveis de ambiente (Ex: Database)
 
 ```sh 
-Informa��es ficam salvos em cache com isso evitar� alguns 
+Informações ficam salvos em cache com isso evitará alguns 
 ```
 
 7. crie as imagens 
