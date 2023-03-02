@@ -38,14 +38,14 @@ services:
         container_name: db
         restart: unless-stopped
         ports:
-            - ${SERVER_PORT_DB:-3306}:3306
+            - ${SERVER_PORT_DB}:3306
         volumes:
             - dbdata:/var/lib/mysql
         environment:
-            - MYSQL_DATABASE=${DB_DATABASE:-homestead}
-            - MYSQL_USER=${DB_USERNAME:-homestead}
-            - MYSQL_PASSWORD=${DB_PASSWORD:-secret}
-            - MYSQL_ROOT_PASSWORD=${DB_PASSWORD:-secret}
+            - MYSQL_DATABASE=${DB_DATABASE}
+            - MYSQL_USER=${DB_USERNAME}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
         networks:
             - laravel-network
 
@@ -58,8 +58,8 @@ services:
         environment:
             - PMA_ARBITRARY=1
             - PMA_HOST=${DB_HOST:-db}
-            - PMA_USER=${DB_USERNAME:-homestead}
-            - PMA_PASSWORD=${DB_PASSWORD:-secret}
+            - PMA_USER=${DB_USERNAME}
+            - PMA_PASSWORD=${DB_PASSWORD}
         networks:
             - laravel-network
 

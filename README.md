@@ -52,37 +52,43 @@ sudo chmod 775 -R mysql (permissão no diretório mysql)
 sudo chown -R "${USER:-$(id -un)}" . 
 ```
 
-6. crie as imagens 
+6. Antes de fazer o build altere as vari�veis de ambiente (Ex: Database)
+
+```sh 
+Informa��es ficam salvos em cache com isso evitar� alguns 
+```
+
+7. crie as imagens 
 
 ```sh
 docker-compose build
 ```
 
-7. Suba os containers do projeto
+8. Suba os containers do projeto
 
 ```sh
 docker-compose up -d
 ```
 
-8. Acesse o container app com o bash
+9. Acesse o container app com o bash
 
 ```sh
 docker-compose exec app bash
 ```
 
-9. Instale as dependências do projeto
+10. Instale as dependências do projeto
 
 ```sh
 composer install
 ```
 
-10. Gere a key do projeto Laravel
+11. Gere a key do projeto Laravel
 
 ```sh
 php artisan key:generate
 ```
 
-11. Configure o arquivo .gitignore
+12. Configure o arquivo .gitignore
 
 ```sh
 Informar arquivo .env e arquivos DB
