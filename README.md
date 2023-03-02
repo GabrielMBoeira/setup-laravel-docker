@@ -55,7 +55,7 @@ sudo chown -R "${USER:-$(id -un)}" .
 7. Antes de fazer o build altere as variáveis de ambiente (Ex: Database)
 
 ```sh 
-Informações ficam salvos em cache com isso evitará alguns 
+Informações ficam salvas em volume docker e cache Laravel com isso evitará alguns 
 ```
 
 8. crie as imagens 
